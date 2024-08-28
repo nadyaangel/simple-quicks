@@ -38,24 +38,24 @@ const Home: React.FC = () => {
         <div className="fixed right-5 bottom-3">
           
           <div className="relative items-end">
-            <div className={`right-5 bottom-5 w-12 absolute text-center transition-transform duration-500 ease-in-out transform ${ isMenuOpen? '-translate-x-8' : ''}`}
+            <div className={`${isChatClicked? 'translate-x-8' : ''} right-5 bottom-3 w-12 absolute text-center transition-transform duration-500 ease-in-out transform ${ isMenuOpen? '-translate-x-10' : 'hidden'}`}
             style={{marginRight: isMenuOpen? '1rem': '0'}}>
 
-              <p className="text-white mb-2 text-[12px] font-bold">Inbox</p>
+              <p className="text-white text-center mb-2 text-[12px] font-bold">Inbox</p>
               <a href="#" onClick={handleChatClick}>
                 <Image src={isChatClicked? ChatButtonActived : ChatButtonDisable} alt="Chat" className="w-10"></Image>
               </a>
             </div>
             
             
-            <div className={`right-5 bottom-5 w-12 absolute text-center transition-transform duration-500 ease-in-out transform ${isMenuOpen ? '-translate-x-28' : ''} ${isChatClicked? 'hidden' : ''}`}>
+            <div className={`right-5 bottom-3 w-12 absolute text-center transition-transform duration-500 ease-in-out transform ${isMenuOpen ? '-translate-x-28' : 'hidden'} ${isChatClicked? 'hidden' : ''}`}>
               <p className="text-white mb-2 text-[12px] font-bold text-center">Task</p>
               <a href="#">
                 <Image src={TaskButtonDisable} alt="Task" className="w-10"></Image>
               </a>
             </div>
             
-            <div className={`right-5 bottom-5 absolute transition-transform duration-500 ease-in-out ${isMenuOpen? 'translate-x-0' : ''}`}>
+            <div className={`right-5 bottom-3 w-14 ml-12 absolute transition-transform duration-500 ease-in-out ${isMenuOpen? 'translate-x-0' : ''} ${isChatClicked? 'hidden' : ''}`}>
               <p className="invisible">Menu</p>
               <a href="#" onClick={toggleMenu}>
                 <Image src={MenuButton} alt="Menu" className="w-12"></Image>
