@@ -48,7 +48,7 @@ const Home: React.FC = () => {
             </div>
             
             
-            <div className={`right-5 bottom-3 w-12 absolute text-center transition-transform duration-500 ease-in-out transform ${isMenuOpen ? '-translate-x-28' : 'hidden'} ${isChatClicked? 'hidden' : ''}`}>
+            <div className={`right-5 bottom-3 w-12 absolute text-center transition-transform duration-500 ease-in-out transform ${isMenuOpen ? '-translate-x-28' : 'hidden'} ${isChatClicked? '-translate-x-9' : ''}`}>
               <p className="text-white mb-2 text-[12px] font-bold text-center">Task</p>
               <a href="#">
                 <Image src={TaskButtonDisable} alt="Task" className="w-10"></Image>
