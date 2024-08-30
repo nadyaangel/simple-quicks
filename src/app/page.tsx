@@ -41,7 +41,7 @@ const Home: React.FC = () => {
             <div className={`${isChatClicked? 'translate-x-8' : ''} right-5 bottom-3 w-12 absolute text-center transition-transform duration-500 ease-in-out transform ${ isMenuOpen? '-translate-x-10' : 'hidden'}`}
             style={{marginRight: isMenuOpen? '1rem': '0'}}>
 
-              <p className="text-white text-center mb-2 text-[12px] font-bold">Inbox</p>
+              <p className={`text-white text-center mb-2 text-[12px] font-bold ${isChatClicked? 'hidden' : ''}`}>Inbox</p>
               <a href="#" onClick={handleChatClick}>
                 <Image src={isChatClicked? ChatButtonActived : ChatButtonDisable} alt="Chat" className="w-10"></Image>
               </a>
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
             
             
             <div className={`right-5 bottom-3 w-12 absolute text-center transition-transform duration-500 ease-in-out transform ${isMenuOpen ? '-translate-x-28' : 'hidden'} ${isChatClicked? '-translate-x-9' : ''}`}>
-              <p className="text-white mb-2 text-[12px] font-bold text-center">Task</p>
+              <p className={`text-white mb-2 text-[12px] font-bold text-center ${isChatClicked? 'hidden' : ''}`}>Task</p>
               <a href="#">
                 <Image src={TaskButtonDisable} alt="Task" className="w-10"></Image>
               </a>
